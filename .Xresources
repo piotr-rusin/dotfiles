@@ -1,0 +1,83 @@
+Xcursor.theme: Paper
+
+!! PaperColor Theme
+!URxvt.foreground: #4D4D4C
+!URxvt.background: #EEEEEE
+!! black
+!URxvt.color0: #EDEDED
+!URxvt.color8: #969694
+!! red
+!URxvt.color1: #D7005F
+!URxvt.color9: #D7005F
+!! green
+!URxvt.color2: #718C00
+!URxvt.color10: #718C00
+!! yellow / orange
+!URxvt.color3: #D75F00
+!URxvt.color11: #D75F00
+!! blue
+!URxvt.color4: #4271AE
+!URxvt.color12: #4271AE
+!! magenta
+!URxvt.color5: #8959A8
+!URxvt.color13: #8959A8
+!! cyan
+!URxvt.color6: #3E999F
+!URxvt.color14: #3E999F
+!! white
+!URxvt.color7: #4D4D4C
+!URxvt.color15: #F5F5F5
+
+
+URxvt.letterSpace: 1
+URxvt.font: xft:Source Code Pro for Powerline:size=10,xft:SauceCodePro Nerd Font:size=10
+! scrollbar width
+URxvt*thickness: 10
+URxvt*scrollColor: #C4C4C4
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
+URxvt*scrollBar_floating: true
+
+! -------------------------------------------------------------------
+! ROFI configuration
+! -------------------------------------------------------------------
+! Contains both custom settings and defaults I might want to modify
+! in the future
+rofi.font: Source Code Pro for Powerline 10
+
+rofi.color-enabled: true
+rofi.color-window: #1c2023, #c7ccd1, #393f45
+rofi.color-normal: #1c2023, #adb3ba, #1c2023, #ae95c7, #1c2023
+rofi.color-active: #1c2023, #747c84, #1c2023, #747c84, #1c2023
+rofi.color-urgent: #1c2023, #c7ae95, #1c2023, #c7ae95, #1c2023
+
+! Enabled modi
+rofi.modi:                           window,run,ssh
+! Window opacity
+rofi.opacity:                        100
+! Window width
+rofi.width:                          50
+! Number of lines
+rofi.lines:                          15
+
+! Cycle through the results list
+rofi.cycle:                          false
+
+rofi.padding:                        5
+! Margin between rows
+rofi.line-margin:                    1
+! Border width
+rofi.bw:                             1
+! Separator style (none, dash, solid)
+rofi.separator-style:                solid
+! Scrollbar width
+rofi.scrollbar-width:                10
+
+! Run command to execute
+rofi.run-command:                    {cmd}
+! Command to get extra run targets
+rofi.run-list-command:
+! Run command to execute that runs in shell
+rofi.run-shell-command:              {terminal} -e {cmd}
+! Command executed on accep-entry-custom for window modus
+rofi.window-command:                 xkill -id {window}
