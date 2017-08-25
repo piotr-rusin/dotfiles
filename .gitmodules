@@ -1,0 +1,3 @@
+[submodule ".yadm/submodules/anachron-i3blocks"]
+	path = .yadm/submodules/anachron-i3blocks
+	url = https://github.com/Anachron/i3blocks.git
