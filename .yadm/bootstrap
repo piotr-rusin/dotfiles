@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME - the root directory of dotfiles.
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
