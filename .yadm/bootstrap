@@ -9,3 +9,8 @@ yadm submodule update --recursive --init
 
 echo "Symlinking i3blocks by Anachron"
 ln -sf $HOME/.yadm/submodules/anachron-i3blocks/blocks .config/i3blocks
+
+echo "Creating symbolic links to zsh plugins"
+ZSH_CUSTOM_PLUGINS=~/.oh-my-zsh/custom/plugins
+mkdir -p $ZSH_CUSTOM_PLUGINS
+ln -sf $HOME/.yadm/submodules/base16-shell $ZSH_CUSTOM_PLUGINS
