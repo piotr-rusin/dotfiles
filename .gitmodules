@@ -7,3 +7,6 @@
 [submodule ".yadm/submodules/zsh-autosuggestions"]
 	path = .yadm/submodules/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".yadm/submodules/oh-my-zsh"]
+	path = .yadm/submodules/oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git

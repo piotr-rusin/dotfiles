@@ -15,3 +15,6 @@ ZSH_CUSTOM_PLUGINS=~/.oh-my-zsh/custom/plugins
 mkdir -p $ZSH_CUSTOM_PLUGINS
 ln -sf $HOME/.yadm/submodules/base16-shell $ZSH_CUSTOM_PLUGINS
 ln -sf $HOME/.yadm/submodules/zsh-autosuggestions $ZSH_CUSTOM_PLUGINS
+
+echo "Symlinking oh-my-zsh"
+ln -sf $HOME/.yadm/submodules/oh-my-zsh .oh-my-zsh
