@@ -29,8 +29,8 @@ Xcursor.theme: Paper
 !URxvt.color15: #F5F5F5
 
 
-URxvt.letterSpace: 1
-URxvt.font: xft:Source Code Pro for Powerline:size=10,xft:SauceCodePro Nerd Font:size=10
+URxvt.letterSpace: 0
+URxvt.font: xft:RobotoMono Nerd Font:size=10
 ! scrollbar width
 URxvt*thickness: 10
 URxvt*scrollColor: #C4C4C4
@@ -43,7 +43,7 @@ URxvt*scrollBar_floating: true
 ! -------------------------------------------------------------------
 ! Contains both custom settings and defaults I might want to modify
 ! in the future
-rofi.font: Source Code Pro for Powerline 10
+rofi.font: RobotoMono Nerd Font 10
 
 rofi.color-enabled: true
 rofi.color-window: #1c2023, #c7ccd1, #393f45
