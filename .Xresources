@@ -31,6 +31,9 @@ Xcursor.theme: Paper
 
 URxvt.letterSpace: 0
 URxvt.font: xft:RobotoMono Nerd Font:size=10
+URxvt.boldFont: xft:RobotoMono Nerd Font:size=10:Bold
+URxvt.italicFont: xft:RobotoMono Nerd Font:size=10:Italic
+URxvt.boldItalicFont: xft:RobotoMono Nerd Font:size=10:Bold:Italic
 ! scrollbar width
 URxvt*thickness: 10
 URxvt*scrollColor: #C4C4C4
