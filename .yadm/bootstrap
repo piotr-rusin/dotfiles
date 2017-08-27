@@ -23,37 +23,30 @@ echo "Changing default shell to ZSH"
 chsh -s /bin/zsh
 
 
-echo "Installing fonts:"
+function download {
+  echo "Downloading: $1"
+  curl -fLo "$1" "$SOURCE/${1// /%20}"
+}
 
+
+echo "Installing fonts"
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
 
-echo "* Roboto Mono"
-curl -fLo "RobotoMono-Regular.ttf" https://github.com/google/fonts/raw/master/apache/robotomono/RobotoMono-Regular.ttf
-
-echo "* Roboto Mono Italic"
-curl -fLo "RobotoMono-Italic.ttf" https://github.com/google/fonts/raw/master/apache/robotomono/RobotoMono-Italic.ttf
-
-echo "* Roboto Mono Bold"
-curl -fLo "RobotoMono-Bold.ttf" https://github.com/google/fonts/raw/master/apache/robotomono/RobotoMono-Bold.ttf
-
-echo "* Roboto Mono Bold Italic"
-curl -fLo "RobotoMono-BoldItalic.ttf" https://github.com/google/fonts/raw/master/apache/robotomono/RobotoMono-BoldItalic.ttf
+SOURCE=https://github.com/google/fonts/raw/master/apache/robotomono
+download RobotoMono-Regular.ttf
+download RobotoMono-Italic.ttf
+download RobotoMono-Bold.ttf
+download RobotoMono-BoldItalic.ttf
 
 # patched font for use with urxvt
 # non-patched font is used with i3wm because fontawesome seems to work
 # better as a standalone font (there are no weird spacing issues with
 # any glyphs)
-echo "* Roboto Mono Nerd Font"
-curl -fLo "Roboto Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Nerd%20Font%20Complete.ttf
-
-echo "* Roboto Mono Italic Nerd Font"
-curl -fLo "Roboto Mono Italic Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Italic%20Nerd%20Font%20Complete.ttf
-
-echo "* Roboto Mono Bold Nerd Font"
-curl -fLo "Roboto Mono Bold Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Bold%20Nerd%20Font%20Complete.ttf
-
-echo "* Roboto Mono Bold Italic Nerd Font"
-curl -fLo "Roboto Mono Bold Italic Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete/Roboto%20Mono%20Bold%20Italic%20Nerd%20Font%20Complete.ttf
+SOURCE=https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/RobotoMono/complete
+download "Roboto Mono Nerd Font Complete.ttf"
+download "Roboto Mono Italic Nerd Font Complete.ttf"
+download "Roboto Mono Bold Nerd Font Complete.ttf"
+download "Roboto Mono Bold Italic Nerd Font Complete.ttf"
 
 cd "$HOME"
