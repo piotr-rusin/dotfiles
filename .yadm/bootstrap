@@ -49,4 +49,7 @@ download "Roboto Mono Italic Nerd Font Complete.ttf"
 download "Roboto Mono Bold Nerd Font Complete.ttf"
 download "Roboto Mono Bold Italic Nerd Font Complete.ttf"
 
+echo "Refreshing font cache"
+fc-cache -fv
+
 cd "$HOME"
