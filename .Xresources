@@ -53,10 +53,10 @@ URxvt*scrollBar_floating: true
 rofi.font: RobotoMono Nerd Font 10
 
 rofi.color-enabled: true
-rofi.color-window: #1c2023, #c7ccd1, #393f45
-rofi.color-normal: #1c2023, #adb3ba, #1c2023, #ae95c7, #1c2023
-rofi.color-active: #1c2023, #747c84, #1c2023, #747c84, #1c2023
-rofi.color-urgent: #1c2023, #c7ae95, #1c2023, #c7ae95, #1c2023
+rofi.color-window: base00, base05, base01
+rofi.color-normal: base00, base04, base00, base0D, base00
+rofi.color-active: base00, base03, base00, base03, base00
+rofi.color-urgent: base00, base08, base00, base08, base00
 
 ! Enabled modi
 rofi.modi:                           window,run,ssh
