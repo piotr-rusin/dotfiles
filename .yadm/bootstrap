@@ -24,8 +24,10 @@ if [ $SHELL != "/bin/zsh" ]; then
 fi
 
 function download {
-  echo "Downloading: $1"
-  curl -fLo "$1" "$SOURCE/${1// /%20}"
+  if [ ! -f "$1" ]; then
+    echo "Downloading: $1"
+    curl -fLo "$1" "$SOURCE/${1// /%20}"
+  fi
 }
 
 
