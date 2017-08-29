@@ -18,9 +18,10 @@ ln -sf $HOME/.yadm/submodules/zsh-autosuggestions $ZSH_CUSTOM_PLUGINS
 echo "Symlinking oh-my-zsh"
 ln -sf $HOME/.yadm/submodules/oh-my-zsh .oh-my-zsh
 
-echo "Changing default shell to ZSH"
-chsh -s /bin/zsh
-
+if [ $SHELL != "/bin/zsh" ]; then
+  echo "Changing default shell to ZSH"
+  chsh -s /bin/zsh
+fi
 
 function download {
   echo "Downloading: $1"
