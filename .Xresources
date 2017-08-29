@@ -40,7 +40,7 @@ URxvt.italicFont: xft:RobotoMono Nerd Font:size=10:Italic
 URxvt.boldItalicFont: xft:RobotoMono Nerd Font:size=10:Bold:Italic
 ! scrollbar width
 URxvt*thickness: 10
-URxvt*scrollColor: #C4C4C4
+URxvt*scrollColor: base03
 URxvt*scrollBar_right: true
 URxvt*scrollstyle: plain
 URxvt*scrollBar_floating: true
