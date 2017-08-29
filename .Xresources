@@ -29,6 +29,10 @@ Xcursor.theme: Paper
 !URxvt.color15: #F5F5F5
 
 
+! color definitions and basic color settings
+#include ".base16-xresources/base16-ashes.Xresources"
+
+
 URxvt.letterSpace: 0
 URxvt.font: xft:RobotoMono Nerd Font:size=10
 URxvt.boldFont: xft:RobotoMono Nerd Font:size=10:Bold
