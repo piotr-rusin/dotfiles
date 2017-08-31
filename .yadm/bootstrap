@@ -82,5 +82,11 @@ echo "Installing nodejs"
 .nodenv/bin/nodenv install 8.4.0
 .nodenv/bin/nodenv global 8.4.0
 
+echo "Installing dependencies of neovim plugins"
+pip3 install --user pylama pydocstyle pycodestyle pylint pyflakes \
+mccabe jedi
+.nodenv/versions/8.4.0/bin/npm install -g jshint jscs eslint csslint \
+stylelint htmlhint tern
+
 echo "Updating all neovim plugins"
 nvim +PlugInstall +qall
