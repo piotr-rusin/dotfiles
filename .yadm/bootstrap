@@ -62,3 +62,6 @@ ln -sf $HOME/.yadm/submodules/base16-xresources/xresources .base16-xresources
 echo "Loading Xresources"
 xrdb .Xresources
 
+echo "Symlinking vim-plug"
+mkdir -p .vim/autoload
+ln -sf $HOME/.yadm/submodules/vim-plug/plug.vim .vim/autoload
