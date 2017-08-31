@@ -16,3 +16,6 @@
 [submodule ".yadm/submodules/nodenv"]
 	path = .yadm/submodules/nodenv
 	url = https://github.com/nodenv/nodenv.git
+[submodule ".yadm/submodules/node-build"]
+	path = .yadm/submodules/node-build
+	url = https://github.com/nodenv/node-build.git
