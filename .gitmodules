@@ -13,3 +13,6 @@
 [submodule ".yadm/submodules/vim-plug"]
 	path = .yadm/submodules/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule ".yadm/submodules/nodenv"]
+	path = .yadm/submodules/nodenv
+	url = https://github.com/nodenv/nodenv.git
