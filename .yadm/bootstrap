@@ -65,3 +65,6 @@ xrdb .Xresources
 echo "Symlinking vim-plug"
 mkdir -p .vim/autoload
 ln -sf $HOME/.yadm/submodules/vim-plug/plug.vim .vim/autoload
+
+echo "Updating all neovim plugins"
+nvim +PlugInstall +qall
