@@ -16,7 +16,7 @@ mkdir -p $ZSH_CUSTOM_PLUGINS
 ln -sf $HOME/.yadm/submodules/zsh-autosuggestions $ZSH_CUSTOM_PLUGINS
 
 echo "Symlinking oh-my-zsh"
-ln -sf $HOME/.yadm/submodules/oh-my-zsh .oh-my-zsh
+ln -sfT $HOME/.yadm/submodules/oh-my-zsh .oh-my-zsh
 
 if [ $SHELL != "/bin/zsh" ]; then
   echo "Changing default shell to ZSH"
@@ -57,7 +57,8 @@ fc-cache -fv
 cd "$HOME"
 
 echo "Symlinking Xresource color themes"
-ln -sf $HOME/.yadm/submodules/base16-xresources/xresources \
+mkdir .colors-xresources
+ln -sfT $HOME/.yadm/submodules/base16-xresources/xresources \
 .colors-xresources/base16-xresources
 
 echo "Loading Xresources"
