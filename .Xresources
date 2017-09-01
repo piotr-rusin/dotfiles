@@ -30,8 +30,7 @@ Xcursor.theme: Paper
 
 
 ! color definitions and basic color settings
-#include ".base16-xresources/base16-ashes.Xresources"
-
+#include ".current-colors.Xresources"
 
 URxvt.letterSpace: 0
 URxvt.font: xft:RobotoMono Nerd Font:size=10

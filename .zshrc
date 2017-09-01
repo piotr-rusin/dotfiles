@@ -100,3 +100,27 @@ setopt hist_ignore_all_dups
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+function get_theme_name {
+  file_name=$(basename $1)
+  theme_name="${file_name%.*}"
+  echo $theme_name
+}
+
+
+function change_theme {
+  theme_name=$(get_theme_name $1)
+  vim_theme_name=${theme_name%-256}
+
+  ln -sf $1 ~/.current-colors.Xresources
+  echo -e "if \0041exists('g:colors_name') || \
+g:colors_name != '$vim_theme_name'\n  \
+colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
+
+  xrdb ~/.Xresources
+}
+
+for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
+  theme_name=$(get_theme_name $f)
+  command_name=${theme_name//-/_}
+  alias $command_name='change_theme '$f
+done

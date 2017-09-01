@@ -57,7 +57,8 @@ fc-cache -fv
 cd "$HOME"
 
 echo "Symlinking Xresource color themes"
-ln -sf $HOME/.yadm/submodules/base16-xresources/xresources .base16-xresources
+ln -sf $HOME/.yadm/submodules/base16-xresources/xresources \
+.colors-xresources/base16-xresources
 
 echo "Loading Xresources"
 xrdb .Xresources
