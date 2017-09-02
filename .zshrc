@@ -129,8 +129,12 @@ function set_theme {
 terminal applications, restart them manually."
 }
 
+function create_set_theme_alias {
+  local theme_name=$(get_theme_name $1)
+  local command_name=${theme_name//-/_}
+  alias $command_name='set_theme '$1
+}
+
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
-  theme_name=$(get_theme_name $f)
-  command_name=${theme_name//-/_}
-  alias $command_name='set_theme '$f
+  create_set_theme_alias $f
 done
