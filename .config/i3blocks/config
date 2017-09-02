@@ -68,9 +68,9 @@ markup=none
 label= 
 interval=2
 
-[load]
-label=
-interval=10
+#[load]
+#label=
+#interval=10
 
 #[display]
 #label=
