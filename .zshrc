@@ -107,7 +107,7 @@ function get_theme_name {
 }
 
 
-function change_vim_theme {
+function set_vim_theme {
   local vim_theme_name=${1%-256}
   echo -e "if \0041exists('g:colors_name') || \
 g:colors_name != '$vim_theme_name'\n  \
@@ -122,7 +122,7 @@ function set_theme {
   echo "Reloading .Xresources"
   xrdb ~/.Xresources
   echo "Changing vim theme"
-  change_vim_theme $theme_name
+  set_vim_theme $theme_name
   echo "Restarting i3wm"
   i3-msg restart
   echo "Done. For the changes to be visible in terminal emulator and \
