@@ -132,7 +132,7 @@ terminal applications, restart them manually."
 function create_set_theme_alias {
   local theme_name=$(get_theme_name $1)
   local command_name=${theme_name//-/_}
-  alias $command_name='set_theme '$1
+  alias 'theme_set_'$command_name='set_theme '$1
 }
 
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
