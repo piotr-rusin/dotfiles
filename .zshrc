@@ -138,3 +138,9 @@ function create_set_theme_alias {
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
   create_set_theme_alias $f
 done
+
+function theme_get_info {
+  local current_theme_path=$(readlink -f ~/.current-colors.Xresources)
+  local theme_name=$(get_theme_name $current_theme_path)
+  echo "The current color theme is $theme_name"
+}
