@@ -126,10 +126,10 @@ label=
 instance=mem;free
 interval=30
 
-[memory]
-label=
-instance=swap;total
-interval=30
+#[memory]
+#label=
+#instance=swap;total
+#interval=30
 
 # Part 7
 
