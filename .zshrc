@@ -107,16 +107,19 @@ function get_theme_name {
 }
 
 
-function change_theme {
-  theme_name=$(get_theme_name $1)
-  vim_theme_name=${theme_name%-256}
-
-  ln -sf $1 ~/.current-colors.Xresources
+function change_vim_theme {
+  vim_theme_name=${1%-256}
   echo -e "if \0041exists('g:colors_name') || \
 g:colors_name != '$vim_theme_name'\n  \
 colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
+}
 
+
+function change_theme {
+  theme_name=$(get_theme_name $1)
+  ln -sf $1 ~/.current-colors.Xresources
   xrdb ~/.Xresources
+  change_vim_theme $theme_name
 }
 
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
