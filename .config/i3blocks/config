@@ -86,10 +86,6 @@ interval=2
 #label=
 #interval=10
 
-#[ip-address]
-#label=
-#interval=60
-
 # Part 5
 
 #[keystate]
@@ -150,6 +146,10 @@ interval=30
 label=
 instance=wlp3s0
 interval=10
+
+[ip-address]
+label=
+interval=60
 
 #[space]
 #label=
