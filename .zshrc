@@ -131,15 +131,14 @@ terminal applications, restart them manually."
 
 function _create_set_theme_alias {
   local theme_name=$(_get_theme_name $1)
-  local command_name=${theme_name//-/_}
-  alias 'theme_set_'$command_name='_set_theme '$1
+  alias 'theme-set-'$theme_name='_set_theme '$1
 }
 
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
   _create_set_theme_alias $f
 done
 
-function theme_get_info {
+function theme-get-info {
   local current_theme_path=$(readlink -f ~/.current-colors.Xresources)
   local theme_name=$(_get_theme_name $current_theme_path)
   echo "The current color theme is $theme_name"
