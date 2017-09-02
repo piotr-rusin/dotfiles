@@ -101,14 +101,14 @@ setopt hist_ignore_all_dups
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 function get_theme_name {
-  file_name=$(basename $1)
-  theme_name="${file_name%.*}"
+  local file_name=$(basename $1)
+  local theme_name="${file_name%.*}"
   echo $theme_name
 }
 
 
 function change_vim_theme {
-  vim_theme_name=${1%-256}
+  local vim_theme_name=${1%-256}
   echo -e "if \0041exists('g:colors_name') || \
 g:colors_name != '$vim_theme_name'\n  \
 colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
@@ -116,7 +116,7 @@ colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
 
 
 function change_theme {
-  theme_name=$(get_theme_name $1)
+  local theme_name=$(get_theme_name $1)
   echo "Changing theme to "$theme_name
   ln -sf $1 ~/.current-colors.Xresources
   echo "Reloading .Xresources"
