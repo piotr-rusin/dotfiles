@@ -115,7 +115,7 @@ colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
 }
 
 
-function change_theme {
+function set_theme {
   local theme_name=$(get_theme_name $1)
   echo "Changing theme to "$theme_name
   ln -sf $1 ~/.current-colors.Xresources
@@ -132,5 +132,5 @@ terminal applications, restart them manually."
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
   theme_name=$(get_theme_name $f)
   command_name=${theme_name//-/_}
-  alias $command_name='change_theme '$f
+  alias $command_name='set_theme '$f
 done
