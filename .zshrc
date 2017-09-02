@@ -117,9 +117,16 @@ colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
 
 function change_theme {
   theme_name=$(get_theme_name $1)
+  echo "Changing theme to "$theme_name
   ln -sf $1 ~/.current-colors.Xresources
+  echo "Reloading .Xresources"
   xrdb ~/.Xresources
+  echo "Changing vim theme"
   change_vim_theme $theme_name
+  echo "Restarting i3wm"
+  i3-msg restart
+  echo "Done. For the changes to be visible in terminal emulator and \
+terminal applications, restart them manually."
 }
 
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
