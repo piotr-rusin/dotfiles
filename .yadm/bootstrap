@@ -92,3 +92,6 @@ stylelint htmlhint tern
 
 echo "Updating all neovim plugins"
 nvim +PlugInstall +qall
+
+echo "Setting color theme"
+/bin/zsh -i -c theme-set-base16-phd
