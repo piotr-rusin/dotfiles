@@ -1,7 +1,7 @@
 # A modified copy of /etc/xdg/dunst/dunstrc
 
 [global]
-    font = Monospace 8
+    font = Roboto Mono 10
 
     # Allow a small subset of html markup:
     #   <b>bold</b>
