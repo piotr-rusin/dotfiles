@@ -151,7 +151,7 @@
 
 [frame]
     width = 1
-    color = "#505050"
+    # $frame-color
 
 [shortcuts]
 
@@ -177,18 +177,18 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#303030"
-    foreground = "#acc267"
+    # $background
+    # $low-foreground
     timeout = 10
 
 [urgency_normal]
-    background = "#303030"
-    foreground = "#d0d0d0"
+    # $background
+    # $normal-foreground
     timeout = 10
 
 [urgency_critical]
-    background = "#303030"
-    foreground = "#fb9fb1"
+    # $background
+    # $critical-foreground
     timeout = 0
 
 

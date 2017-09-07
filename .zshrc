@@ -115,6 +115,27 @@ colorscheme $vim_theme_name\nendif" >| ~/.vimrc_background
 }
 
 
+function _get_color {
+  echo $(cat ~/.current-colors.Xresources | grep "#define $1" | cut -d' ' -f3)
+}
+
+function _set_a_dunst_color {
+  local property=$(echo $1 | cut -d '-' -f 2)
+  local color=$(_get_color $2)
+  sed -i -e "s/# \$$1/$property = \"$color\"/g" ~/.config/dunst/dunstrc
+}
+
+function _set_dunst_colors {
+  (cd ~/.config/dunst; cp dunstrc-template dunstrc)
+
+  _set_a_dunst_color frame-color base03
+  _set_a_dunst_color background base02
+  _set_a_dunst_color low-foreground base0B
+  _set_a_dunst_color normal-foreground base05
+  _set_a_dunst_color critical-foreground base08
+}
+
+
 function _set_theme {
   local theme_name=$(_get_theme_name $1)
   echo "Changing theme to "$theme_name
@@ -123,6 +144,8 @@ function _set_theme {
   xrdb ~/.Xresources
   echo "Changing vim theme"
   _set_vim_theme $theme_name
+  echo "Setting colors for dunst"
+  _set_dunst_colors
   echo "Restarting i3wm"
   i3-msg restart
   echo "Done. For the changes to be visible in terminal emulator and \
