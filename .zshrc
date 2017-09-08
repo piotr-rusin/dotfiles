@@ -128,8 +128,8 @@ function _set_a_dunst_color {
 function _set_dunst_colors {
   (cd ~/.config/dunst; cp dunstrc-template dunstrc)
 
-  _set_a_dunst_color frame-color base03
-  _set_a_dunst_color background base02
+  _set_a_dunst_color frame-color base02
+  _set_a_dunst_color background base01
   _set_a_dunst_color low-foreground base0B
   _set_a_dunst_color normal-foreground base05
   _set_a_dunst_color critical-foreground base08
