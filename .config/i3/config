@@ -217,6 +217,7 @@ client.background       $base07
 exec --no-startup-id lxpolkit
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
+exec --no-startup-id dunst
 exec clipit
 exec dropbox start -i
 assign [class="mpv"] → $video
