@@ -138,18 +138,15 @@ function _set_dunst_colors {
 
 function _set_theme {
   local theme_name=$(_get_theme_name $1)
-  echo "Changing theme to "$theme_name
   ln -sf $1 ~/.current-colors.Xresources
-  echo "Reloading .Xresources"
   xrdb ~/.Xresources
-  echo "Changing vim theme"
   _set_vim_theme $theme_name
-  echo "Setting colors for dunst"
   _set_dunst_colors
-  echo "Restarting i3wm"
   i3-msg restart
-  echo "Done. For the changes to be visible in terminal emulator and \
-terminal applications, restart them manually."
+  sleep 1s
+  notify-send -u 'normal' 'Configuration' 'The theme "'$theme_name\
+'" has been successfully set. For urxvt and neovim, changes will be \
+visible only after starting new instances.'
 }
 
 function _create_set_theme_alias {
