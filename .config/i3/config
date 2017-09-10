@@ -218,8 +218,8 @@ exec --no-startup-id lxpolkit
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id dunst
-exec clipit
-exec dropbox start -i
+exec --no-startup-id clipit
+exec --no-startup-id dropbox start -i
 assign [class="mpv"] → $video
 for_window [class="mpv"] floating enable
 assign [class="Surf"] → $internet
