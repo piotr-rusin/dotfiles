@@ -143,6 +143,8 @@ function _set_theme {
   _set_vim_theme $theme_name
   _set_dunst_colors
   i3-msg restart
+  killall dunst &>/dev/null
+  (dunst&)
   sleep 1s
   notify-send -u 'normal' 'Configuration' 'The theme "'$theme_name\
 '" has been successfully set. For urxvt and neovim, changes will be \
