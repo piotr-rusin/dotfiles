@@ -166,11 +166,6 @@ label=
 command=date '+%a %d-%m-%Y  %H:%M'
 interval=5
 
-[user]
-label=
-command=echo "${USER}"
-interval=once
-
 [audio]
 label=
 interval=5
