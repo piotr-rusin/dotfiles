@@ -151,6 +151,11 @@ interval=10
 label=
 interval=60
 
+[uptime]
+command=awk '{printf("%2dh %02dm",($1/60/60%24),($1/60%60))}' /proc/uptime
+label=
+interval=30
+
 #[space]
 #label=
 #instance=/pub
