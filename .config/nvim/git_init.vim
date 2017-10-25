@@ -125,6 +125,8 @@ call deoplete#enable()
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let deoplete#sources#jedi#show_docstring = 1
 
+let g:neomake_logfile = '/tmp/neomake.log'
+
 let g:neomake_python_pylama_args = ['--format', 'parsable',
        \'--linters', 'pylint,pyflakes,pydocstyle,mccabe,pycodestyle',
        \'--ignore=D203,D213']
