@@ -100,6 +100,11 @@ setopt hist_ignore_all_dups
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export WORKON_HOME=~/.virtualenvs
+export PROJECT_HOME=~/Programowanie/projekty
+source ~/.local/bin/virtualenvwrapper.sh
+
 function _get_theme_name {
   local file_name=$(basename $1)
   local theme_name="${file_name%.*}"
