@@ -1,6 +1,8 @@
 " Basic configuration for neovim, common between the application used
 " as a git editor and as a general editor
 
+let g:python3_host_prog='/usr/bin/python3'
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
