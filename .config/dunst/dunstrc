@@ -149,8 +149,9 @@
     # Paths to default icons.
     icon_folders = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
+    frame_width = 1
+
 [frame]
-    width = 1
     color = "#303030"
 
 [shortcuts]
