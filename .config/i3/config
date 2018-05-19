@@ -42,7 +42,7 @@ mode "$mode_system" {
 bindsym $mod+Shift+e mode "$mode_system"
 
 # start a terminal
-bindsym $mod+Return exec rxvt-unicode
+bindsym $mod+Return exec lxterminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
