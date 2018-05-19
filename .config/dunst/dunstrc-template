@@ -152,7 +152,7 @@
     frame_width = 1
 
 [frame]
-    # $frame-color
+    # $frame-color deprecated, replace with frame_color in the [global] section
 
 [shortcuts]
 
