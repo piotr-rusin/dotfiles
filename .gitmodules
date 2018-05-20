@@ -1,6 +1,3 @@
-[submodule ".yadm/submodules/anachron-i3blocks"]
-	path = .yadm/submodules/anachron-i3blocks
-	url = https://github.com/Anachron/i3blocks.git
 [submodule ".yadm/submodules/zsh-autosuggestions"]
 	path = .yadm/submodules/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git

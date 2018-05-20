@@ -190,7 +190,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bar {
         position top
         strip_workspace_numbers yes
-        status_command i3blocks
+        status_command SCRIPT_DIR=~/.config/i3blocks/blocklets i3blocks
         tray_output primary
         colors {
         background $base00

@@ -25,165 +25,47 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 #command=/usr/lib/i3blocks/$BLOCK_NAME
-command=~/.config/i3blocks/blocks/$BLOCK_NAME
+command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
-# Part 1
-
-
-#[bandwidth]
-#instance=wlp3s0;in
-#label=
-#interval=1
-
-#[bandwidth]
-#instance=wlp3s0;out
-#label=
-#interval=1
-
-#[battery]
-#label=
-#instance=0
-#interval=5
-
-# Part 2
-
-#[bluetooth]
-#label=
-#interval=10
-
-#[brightness]
-#label=
-#interval=5
-
-#[countdown]
-#instance=tomorrow 05:00:00
-#label=
-#interval=1
-
-# Part 3
-
-[cpu]
-label= 
-interval=2
-
-#[load]
-#label=
-#interval=10
-
-#[display]
-#label=
-#interval=5
-
-# Part 4
-#[feed]
-#instance=http://goo.gl/bR2hcp
-#label=
-#interval=60
-
-#[firewall]
-#label=
-#interval=10
-
-# Part 5
-
-#[keystate]
-#label=
-#instance=caps
-#interval=1
-
-#[keystate]
-#label=
-#instance=num
-#interval=1
-
-#[launcher]
-#label=
-#interval=once
-
-# Part 6
-
-#[locale]
-#label=
-#interval=once
-
-#[mail]
-#label=
-#instance=~/.gmx-private
-#interval=60
-
-[trash]
-label=
-interval=10
-
-[space]
-label=
-interval=30
-
-[memory]
-label=
-instance=mem;free
-interval=30
-
-#[memory]
-#label=
-#instance=swap;total
-#interval=30
-
-# Part 7
-
-#[microphone]
-#label=
-#interval=5
-
-#[network]
-#label=
-#instance=enp4s0f2
-#interval=10
-
-[network]
-label=
-instance=wlp3s0
-interval=10
-
-[ip-address]
-label=
-interval=60
+[mediaplayer]
+instance=cmus
+interval=5
+signal=10
 
 [uptime]
 command=awk '{printf("%2dh %02dm",($1/60/60%24),($1/60%60))}' /proc/uptime
 label=
 interval=30
 
-#[space]
-#label=
-#instance=/pub
-#interval=30
+[wifi]
+label=
+instance=wlp3s0
+interval=10
 
-[time]
+[network]
+label=
+instance=enp2s0
+interval=10
+
+[trash]
+label=
+interval=10
+
+[calendar]
+command=$SCRIPT_DIR/calendar -f '+%a %d-%m-%Y %H:%M'
 label=
-command=date '+%a %d-%m-%Y  %H:%M'
-interval=5
+interval=1
 
-[audio]
+[apt-upgrades]
+signal=1
+interval=once
+
+[volume]
 label=
-interval=5
-
-#[cmus]
-#command=~/.i3-blocks/blocks/scroll $BLOCK_NAME
-#label=
-#markup=pango
-#interval=repeat
-
-# Part 12
-
-#[window]
-#command=~/.i3-blocks/blocks/scroll $BLOCK_NAME
-#label=
-#markup=pango
-#interval=repeat
-
-#[keymap]
-#label=
-#interval=10
+#label=♪
+instance=Master
+#instance=PCM
+interval=once
+signal=10

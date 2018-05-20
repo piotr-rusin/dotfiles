@@ -7,9 +7,6 @@ cd "$HOME"
 echo "Init submodules"
 yadm submodule update --recursive --init
 
-echo "Symlinking i3blocks by Anachron"
-ln -sf $HOME/.yadm/submodules/anachron-i3blocks/blocks .config/i3blocks
-
 echo "Symlinking oh-my-zsh"
 ln -sfT $HOME/.yadm/submodules/oh-my-zsh .oh-my-zsh
 
