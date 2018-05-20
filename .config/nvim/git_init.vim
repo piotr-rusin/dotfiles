@@ -83,6 +83,8 @@ if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
 endif
 
+set termguicolors
+
 " manually setting airline theme
 " TODO: test alternatives:
 " * base16_oceanicnext
