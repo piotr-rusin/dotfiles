@@ -4,4 +4,4 @@
 	email = piotr.rusin88@gmail.com
 	name = Piotr Rusin
 [credential]
-	helper = cache --timeout=300
+	helper = cache
