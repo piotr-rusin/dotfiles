@@ -150,14 +150,27 @@ function _set_theme {
 visible only after starting new instances.'
 }
 
+
+_set_theme_commands=()
+
+
 function _create_set_theme_alias {
   local theme_name=$(_get_theme_name $1)
   alias 'theme-set-'$theme_name='_set_theme '$1
+  _set_theme_commands+='theme-set-'$theme_name
 }
 
 for f in $(find -L ~/.colors-xresources -type f -name "*.Xresources"); do
   _create_set_theme_alias $f
 done
+
+
+function set_theme {
+  local selected_theme=$((IFS=$'\n'; echo "${_set_theme_commands[*]}") | rofi -dmenu -p \
+"Set a color theme for i3wm, urxvt, rofi and neovim")
+  eval $selected_theme
+}
+
 
 function theme-get-info {
   local current_theme_path=$(readlink -f ~/.current-colors.Xresources)

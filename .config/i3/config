@@ -40,6 +40,7 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "$mode_system"
+bindsym $mod+Shift+t exec /bin/zsh -i -c set_theme
 
 # start a terminal
 bindsym $mod+Return exec lxterminal
