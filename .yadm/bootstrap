@@ -65,28 +65,6 @@ echo "Symlinking vim-plug"
 mkdir -p .vim/autoload
 ln -sf $HOME/.yadm/submodules/vim-plug/plug.vim .vim/autoload
 
-echo "Installing nodenv"
-ln -sfT $HOME/.yadm/submodules/nodenv .nodenv
-cd ~/.nodenv
-src/configure
-make -C src
-
-cd "$HOME"
-
-mkdir .nodenv/plugins
-ln -sf $HOME/.yadm/submodules/node-build .nodenv/plugins
-.nodenv/bin/nodenv init &>.nodenv_init.out
-
-echo "Installing nodejs"
-.nodenv/bin/nodenv install 8.4.0
-.nodenv/bin/nodenv global 8.4.0
-
-echo "Installing dependencies of neovim plugins"
-pip3 install --user pylama pydocstyle pycodestyle pylint pylama-pylint \
-pyflakes mccabe jedi
-.nodenv/versions/8.4.0/bin/npm install -g jshint jscs eslint csslint \
-stylelint htmlhint tern
-
 echo "Updating all neovim plugins"
 nvim +PlugInstall +qall
 

@@ -65,12 +65,6 @@ if [ -d ~/.local/bin/ ] ; then
     export PATH=~/.local/bin:$PATH
 fi
 
-if [ -d ~/.nodenv/bin ] ; then
-    export PATH=~/.nodenv/bin:$PATH
-fi
-
-eval "$(nodenv init -)"
-
 unsetopt hist_ignore_dups
 setopt hist_ignore_all_dups
 

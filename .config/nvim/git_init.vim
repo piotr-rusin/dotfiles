@@ -23,17 +23,6 @@ Plug 'scrooloose/nerdtree'
 
 " Providing autocompletion:
 Plug 'Shougo/deoplete.nvim'
-" Requires jedi python package
-Plug 'zchee/deoplete-jedi'
-" Requires tern node.js package
-Plug 'carlitux/deoplete-ternjs'
-
-" Provides linting.
-" Uses node.js packages: jshint, jscs, eslint, csslint, stylelint,
-" tidy, htmlhint
-" Uses python packages: pylama, pydocstyle, pycodestyle, pylint,
-" pyflakes, mccabe
-Plug 'neomake/neomake'
 
 " Editing tools:
 Plug 'scrooloose/nerdcommenter'
@@ -42,9 +31,7 @@ Plug 'ntpeters/vim-better-whitespace'
 
 " Syntax highliting, language-specific commands and tools:
 Plug 'dag/vim-fish'
-Plug 'lepture/vim-jinja'
 Plug 'irrationalistic/vim-tasks'
-Plug 'jmcantrell/vim-virtualenv'
 
 call plug#end()
 
@@ -115,21 +102,12 @@ let g:airline_right_sep = ' '
 let g:airline_right_alt_sep = ' '
 
 " Indentation and whitespace settings
-autocmd FileType html,jinja,css,javascript,tasks,yaml setlocal expandtab shiftwidth=2 softtabstop=2
-autocmd FileType python,fish setlocal expandtab shiftwidth=4 softtabstop=4
+autocmd FileType html,css,tasks,yaml setlocal expandtab shiftwidth=2 softtabstop=2
+autocmd FileType fish setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd BufWritePre * StripWhitespace
 
-" Maximum comment length ruler for Python
-let &colorcolumn=72
 
 call deoplete#enable()
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-let deoplete#sources#jedi#show_docstring = 1
 
-let g:neomake_logfile = '/tmp/neomake.log'
-
-let g:neomake_python_pylama_args = ['--format', 'parsable',
-       \'--linters', 'pylint,pyflakes,pydocstyle,mccabe,pycodestyle',
-       \'--ignore=D203,D213']
-autocmd! BufWritePost * Neomake
