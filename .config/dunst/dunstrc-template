@@ -152,8 +152,8 @@
     frame_width = 1
 
 [frame]
-    # $frame-color deprecated, replace with frame_color in the [global] section
-
+    # deprecated, replace with frame_color in the [global] section
+    # $frame-color
 [shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key

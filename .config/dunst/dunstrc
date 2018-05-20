@@ -152,8 +152,8 @@
     frame_width = 1
 
 [frame]
-    color = "#303030" deprecated, replace with frame_color in the [global] section
-
+    # deprecated, replace with frame_color in the [global] section
+    color = "#303030"
 [shortcuts]
 
     # Shortcuts are specified as [modifier+][modifier+]...key
