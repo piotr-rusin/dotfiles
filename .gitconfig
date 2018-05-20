@@ -1,5 +1,6 @@
 [core]
 	editor = nvim -u ~/.config/nvim/git_init.vim
+	excludesfile = ~/.gitignore
 [user]
 	email = piotr.rusin88@gmail.com
 	name = Piotr Rusin
