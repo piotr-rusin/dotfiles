@@ -58,10 +58,6 @@ command=$SCRIPT_DIR/calendar -f '+%a %d-%m-%Y %H:%M'
 label=
 interval=1
 
-[apt-upgrades]
-signal=1
-interval=once
-
 [volume]
 label=
 #label=♪
